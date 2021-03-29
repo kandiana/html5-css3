@@ -40,6 +40,20 @@ body {
     text-align: center;
 }
 
+.button {
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #445162;
+}
+
+.button:hover {
+    background-color: orange;
+}
+
 /******************* FONTS *******************/
 
 @font-face {
@@ -61,13 +75,13 @@ body {
 .header__title {
     font-size: 60px;
     line-height: 1.15;
-    color: #ffffff;
+    color: white;
     margin-bottom: 40px;
 }
 
 .header__list-item {
     font-size: 20px;
-    color: #ffffff;
+    color: white;
 }
 
 .header__list-item::before {
@@ -84,6 +98,7 @@ body {
     width: 472px;
     height: 217px;
     object-fit: cover;
+    background-color: white;
 }
 
 /******************* ABOUT *******************/
@@ -103,6 +118,10 @@ body {
 
 .about__text_margin-bottom {
     margin-bottom: 11px;
+}
+
+.about__video {
+    background-color: #445161;
 }
 
 /******************* ADVANTAGES *******************/
@@ -154,13 +173,15 @@ body {
 
 .screenshots__item-title {
     font-size: 24px;
+    line-height: 1.25;
     color: #445161;
-    margin-bottom: 19px; /*+6px - компенсация высоты строки*/
+    margin-bottom: 13px;
 }
 
 /* в макете блоки немного поехали (справа 42px), чтобы получить точно такой же вид, надо либо шрифт уменьшать, либо текст менять... */
 .screenshots__item-img {
     display: block;
+    background-color: #445161;
     width: 200px;
     min-height: 150px;
     height: 100%;
@@ -231,4 +252,160 @@ body {
 
 .reviews__item-author-name {
     color: #989898;
+}
+
+/******************* PRODUCTS *******************/
+
+.products {
+    padding: 45px 0 50px;
+}
+
+.products__title {
+    margin-bottom: 26px;
+}
+
+.products__wrapper {
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.products__card {
+    width: 300px;
+    background-color: #445161;
+    border-radius: 5px;
+    padding: 13px 0 19px;
+    text-align: center;
+}
+
+.products__card:not(:last-of-type) {
+    margin-right: 45px;
+}
+
+.products__card-type {
+    font-size: 24px;
+    line-height: 1.25;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.products__card-price {
+    background-color: white;
+    border: 2px solid #445162;
+    padding: 25px 0 16px;
+    font-size: 40px;
+    line-height: 0.75;
+    color: #445162;
+}
+
+.products__card-list {
+    padding: 16px 20px 16px;
+    list-style-type: decimal;
+    list-style-position: inside;
+    font-size: 14px;
+    line-height: 1.7;
+    color: white;
+    text-align: left;
+}
+
+.products__card-list-item:not(:last-of-type) {
+    margin-bottom: 5px;
+}
+
+.products__card-button {
+    padding: 16px 111px 9px;
+}
+
+/******************* FOOTER *******************/
+
+.contacts {
+    background-color: #445162;
+    padding: 25px 0 48px;
+}
+
+.contacts__title {
+    color: white;
+    margin-bottom: 43px;
+}
+
+.contacts__wrapper {
+    justify-content: center;
+}
+
+.submission-form {
+    width: 500px;
+    margin-right: 50px;
+    text-align: center;
+}
+
+.submission-form__item {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 12px 0 7px 12px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #445162;
+}
+
+.submission-form__item::placeholder {
+    font-family: Arial, sans-serif; /*иначе в textarea не тот шрифт...*/
+    color: #445162;
+}
+
+.submission-form__item:focus {
+    outline-color: orange;
+}
+
+.submission-form__item_big {
+    max-width: 500px;
+    min-width: 500px;
+    min-height: 175px;
+}
+
+.submission-form__button {
+    padding: 12px 50px 7px;
+}
+
+.contacts__list {
+    color: white;
+    margin-bottom: 50px;
+    padding-top: 5px;
+}
+
+.contacts__list-item:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+.contacts__icon {
+    fill: white;
+    margin-right: 5px;
+}
+
+.contacts__links {
+    padding-left: 5px;
+}
+
+.contacts__link-img {
+    text-decoration: none;
+    fill: white;
+}
+
+.contacts__link-img:not(:last-of-type) {
+    margin-right: 5px;
+}
+
+.contacts__link-img:hover {
+    fill: orange;
+}
+
+.footer__copyright {
+    display: block;
+    padding: 12px 0;
+    background-color: #f5f5f5;
+    font-size: 12px;
+    line-height: 2;
+    color: #445162;
+    text-align: center;
 }
