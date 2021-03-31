@@ -67,6 +67,10 @@ html {
     box-sizing: inherit;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     font-family: Montserrat, Helvetica, sans-serif;
 }
@@ -78,8 +82,162 @@ body {
 
 .title {
     font-family: Raleway, Helvetica, sans-serif;
+    font-weight: 600;
 }
 
 .button {
+    background-color: #988574;
+    border: none;
+    border-radius: 3px;
+    width: 170px;
+    padding: 20px 0;
     font-family: Roboto, Helvetica, sans-serif;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: white;
+    color: #988574;
+    font-weight: bold;
+}
+
+/************************* HEADER *************************/
+
+.header {
+    background: url(../img/header_bg.svg) #777 center center / cover;
+    height: 100vh;
+    padding: 40px 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/****** Navbar ******/
+
+.header__navbar {
+    /* margin-bottom: 315px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header__logo,
+.header__link-img {
+    fill: white;
+}
+
+.header__navlinks {
+    display: flex;
+    align-items: center;
+}
+
+.header__link {
+    color: white;
+}
+
+.header__link:not(:last-of-type) {
+    margin-right: 25px;
+}
+
+.header__links-text {
+    margin-right: 55px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.header__link-img:not(:last-of-type) {
+    margin-right: 30px;
+}
+
+.header__link:hover {
+    color: #c7b299;
+}
+
+.header__logo:hover,
+.header__link-img:hover {
+    fill: #c7b299;
+}
+
+/****** Description ******/
+
+.header__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.header__slide-description {
+    width: 570px;
+    color: white;
+    text-align: center;
+    /* margin-bottom: 310px; */
+}
+
+.header__title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.15;
+}
+
+.header__subtitle {
+    font-size: 52px;
+    line-height: 1.2;
+}
+
+.header__text {
+    font-weight: normal;
+    line-height: 1.25;
+    margin-bottom: 40px;
+}
+
+.header__slide-nav {
+    outline: none;
+    background: none;
+    border: none;
+    fill: white;
+    opacity: 0.5;
+    position: absolute;
+    top: 40px;
+}
+
+.header__slide-nav:hover {
+    fill: #d3c1ac;
+    opacity: 1;
+}
+
+.header__slide-nav_prev {
+    left: 10%;
+}
+
+.header__slide-nav_next {
+    right: 10%;
+}
+
+.header__pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.header__pagination-item {
+    width: 10px;
+    height: 10px;
+    background-color: white; /*чтобы точки по центру убрать, которые периодически появляются*/
+    border: 5px solid white;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.header__pagination-item:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+.header__pagination-item:hover {
+    background: none;
+    border: 1px solid #d3c1ad;
+    transform: scale(1.5);
 }
