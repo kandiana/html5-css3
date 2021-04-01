@@ -265,7 +265,7 @@ body {
 }
 
 .services__card-img {
-    fill: 555555;
+    fill: #555555;
     margin-bottom: 30px;
 }
 
@@ -274,7 +274,7 @@ body {
     margin-bottom: 20px;
 }
 
-.services__card:not(last-of-type) {
+.services__card:not(:last-of-type) {
     margin-right: 30px;
 }
 
