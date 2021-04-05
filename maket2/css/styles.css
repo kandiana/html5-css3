@@ -123,7 +123,7 @@ body {
 /************************* HEADER *************************/
 
 .header {
-    background: url(../img/header_bg.svg) #777 center center / cover;
+    background: url(../img/header_bg.png) #777 center center / cover;
     min-height: 100vh;
     padding: 40px 0 50px;
     display: flex;
@@ -327,4 +327,196 @@ body {
 
 .realization__img {
     display: block;
+    max-width: 100%;
+}
+
+/************************* PURCHASE *************************/
+
+.purchase {
+    background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211b19 0%, #4e3326 100%);
+    padding: 45px 0;
+}
+
+.purchase__content {
+    margin-right: 535px;
+}
+
+.purchase__title {
+    font-family: Raleway, Helvetica, sans-serif;
+    font-size: 28px;
+    line-height: 1.2;
+    color: white;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.purchase__title:hover {
+    color: #c7b299;
+    cursor: pointer;
+}
+
+.purchase__comment {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.25;
+    color: #615855;
+}
+
+/************************* PROJECTS *************************/
+
+.projects {
+    padding: 60px 0 35px;
+}
+
+.projects__title {
+    margin-bottom: 10px;
+}
+
+.projects__text {
+    max-width: 800px;
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.25;
+    text-align: center;
+    color: #8c8c8c;
+}
+
+.project__navbar {
+    margin-bottom: 70px;
+}
+
+.project__button {
+    background-color: white;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    font-weight: 300;
+    font-size: 14px;
+    color: #8c8c8c;
+    padding: 9px 15px;
+}
+
+.project__button:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+.project__button:hover {
+    background-color: #998575;
+    color: white;
+}
+
+.projects__cards {
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.projects__card {
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.projects__card:nth-of-type(3n) {
+    margin-right: 0;
+}
+
+.projects__card:nth-of-type(-n + 3) {
+    margin-bottom: 70px;
+}
+
+.projects__card-img {
+    display: block;
+}
+
+.projects__card-description {
+    background-color: #fbfaf8;
+    padding: 25px;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.projects__card-description::before {
+    content: "";
+    position: absolute;
+    top: -16px;
+    left: 16px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #fbfaf8;
+    transform: scaleY(0.6);
+}
+
+.projects__card-title {
+    font-family: Raleway, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #c7b299;
+    margin-bottom: 10px;
+}
+
+.projects__card-text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #d1d1d1;
+}
+
+.projects__card:hover .projects__card-description {
+    background-color: #352f2d;
+}
+
+.projects__card:hover .projects__card-description::before {
+    border-bottom: 10px solid #352f2d;
+}
+
+.projects__card:hover .projects__card-title {
+    color: white;
+}
+
+.projects__card:hover .projects__card-text {
+    color: #c7b299;
+}
+
+/************************* PRESENTATION *************************/
+
+.presentation {
+    padding: 250px 0 195px;
+    position: relative;
+    font-weight: 300;
+    line-height: 1.25;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.presentation__video {
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.presentation__video-button {
+    fill: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: 15px solid transparent;
+    border-radius: 50%;
+    box-sizing: content-box;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.presentation__video-title {
+    color: white;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.presentation__video-text {
+    max-width: 570px;
+    margin-bottom: 20px;
+}
+
+.presentation__video-time {
+    color: #c7b299;
 }
