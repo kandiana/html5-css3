@@ -722,6 +722,7 @@ body {
 
 .posts__item:hover .posts__item-preview {
     background-color: #352f2d;
+    border-color: #352f2d;
 }
 
 .posts__item:hover .posts__item-title {
