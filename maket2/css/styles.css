@@ -479,21 +479,16 @@ body {
 /************************* PRESENTATION *************************/
 
 .presentation {
-    /* padding: 250px 0 195px; */
     position: relative;
 }
 
 .presentation__video {
-    /* position: absolute; */
     width: 100%;
-    /* top: 0;
-    left: 0;
-    z-index: -1; */
 }
 
 .presentation__info {
     position: absolute;
-    top: calc(50% - 260px / 2);
+    top: calc(50% - 100px);
     left: calc(50% - 570px / 2);
     font-weight: 300;
     line-height: 1.25;
@@ -744,4 +739,204 @@ body {
 
 .posts__slide-prev {
     margin-right: 20px;
+}
+
+/************************* PARTNERS *************************/
+
+.partners {
+    background: url(../img/partners_bg.png) #777 center center / cover;
+    padding: 140px 0;
+}
+
+.partners__wrapper {
+    align-items: center;
+}
+
+.partners__logo {
+    display: block;
+}
+
+.partners__logo:not(:last-of-type) {
+    margin-right: 75px;
+}
+
+/************************* FOOTER *************************/
+
+.footer {
+    background-color: #191919;
+}
+
+/************ Text part ************/
+
+.footer__wrapper {
+    padding: 75px 15px 130px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.footer__waxom-info {
+    margin-right: 70px;
+}
+
+.footer__waxom-title-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer__waxom-logo {
+    fill: white;
+    margin-right: 10px;
+}
+
+.footer__waxom-title {
+    font-weight: 400;
+    font-size: 34px;
+    color: white;
+}
+
+.footer__waxom-info-content {
+    width: 270px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+.footer__waxom-more {
+    font-size: 14px;
+    line-height: 1.2;
+    color: #d1d1d1;
+    cursor: pointer;
+}
+.footer__waxom-more-text {
+    margin-right: 10px;
+}
+
+.footer__waxom-more-arrow {
+    fill: #d1d1d1;
+}
+
+.footer__waxom-more:hover .footer__waxom-more-text {
+    color: #c7b299;
+}
+
+.footer__waxom-more:hover .footer__waxom-more-arrow {
+    fill: #c7b299;
+}
+
+.footer__info-compilation {
+    margin-top: 35px;
+    max-width: 270px;
+}
+
+.footer__info-compilation:not(:last-of-type) {
+    margin-right: 50px;
+}
+
+.footer__info-compilation-title {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.footer__post {
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.footer__post:not(:last-of-type) {
+    margin-bottom: 12px;
+}
+
+.footer__post:not(:last-of-type)::after {
+    content: "";
+    display: block;
+    height: 16px;
+    border-bottom: 1px solid #242424;
+    width: 100%;
+}
+
+.footer__post_margin {
+    margin-bottom: 5px;
+}
+
+.footer__post-date {
+    font-size: 12px;
+    color: #363636;
+}
+
+.footer__post-content {
+    font-size: 14px;
+    color: #555555;
+}
+
+.footer__posts .footer__post:hover {
+    cursor: pointer;
+}
+
+.footer__posts .footer__post:hover .footer__post-date {
+    color: white;
+}
+
+.footer__posts .footer__post:hover .footer__post-content {
+    color: #c7b299;
+}
+
+.footer__post_blue {
+    color: #00bff3;
+}
+
+.footer__post_link {
+    color: #757575;
+}
+
+.footer__widget-images {
+    flex-wrap: wrap;
+}
+
+.footer__widget-img:nth-of-type(-n + 2) {
+    margin-bottom: 10px;
+}
+
+.footer__widget-img:nth-of-type(odd) {
+    margin-right: 10px;
+}
+
+/************ Links & copyright ************/
+
+.footer__links {
+    background-color: #101010;
+}
+
+.footer__links-wrapper {
+    padding: 60px 15px 40px;
+    justify-content: flex-start;
+}
+
+.footer__copyright,
+.footer__link {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1.2;
+    color: #555555;
+}
+
+.footer__copyright,
+.footer__link:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+.footer__copyright::after,
+.footer__link:not(:last-of-type)::after {
+    content: "";
+    height: 16px;
+    border-right: 1px solid #1a1a1a;
+    padding-left: 10px;
+}
+
+.footer__link:hover {
+    color: #baa78f;
 }
