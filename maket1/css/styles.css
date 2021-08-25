@@ -2,98 +2,112 @@
 html {
     box-sizing: border-box;
 }
-
 *,
 *:before,
 *:after {
     box-sizing: inherit;
 }
-
 body {
     font-family: Arial, sans-serif;
-    font-weight: 400;
 }
-
 .container {
     max-width: 1172px;
     margin: 0 auto;
 }
-
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper_wrap {
+    flex-wrap: wrap;
+}
 .text {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     color: #333333;
 }
-
 .section-title {
     font-size: 30px;
-    line-height: 36px;
+    line-height: 1.2;
     color: #445161;
     text-align: center;
 }
 
-/******************* HEADER *******************/
+.button {
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #445162;
+}
 
+.button:hover {
+    background-color: orange;
+}
+
+/******************* FONTS *******************/
+
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/robotoitalic.eot") format("eot");
+    src: local("Roboto Italic"), local("Roboto-Italic"), url("fonts/robotoitalic.woff2") format("woff2"),
+        url("fonts/robotoitalic.woff") format("woff"), url("fonts/robotoitalic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+/******************* HEADER *******************/
 .header {
     background-color: #445161;
     padding: 25px 0 20px;
 }
-.header__wrapper {
-    display: flex;
-    justify-content: space-between;
-}
-
 .header__title {
     font-size: 60px;
-    line-height: 69px;
+    line-height: 1.15;
     color: #ffffff;
+    color: white;
     margin-bottom: 40px;
 }
 
 .header__list-item {
     font-size: 20px;
-    line-height: 23px;
     color: #ffffff;
+    color: white;
 }
 
 .header__list-item::before {
     content: url(../img/check-icon.svg);
     margin-right: 5px;
 }
-
 .header__list-item:not(:last-of-type) {
-    margin-bottom: 10px;
+    margin-bottom: 13px; /*+3px - компенсация высоты строки*/
 }
-
 .header__img {
     display: block;
     width: 472px;
     height: 217px;
     object-fit: cover;
+    background-color: white;
 }
 
 /******************* ABOUT *******************/
-
 .about {
     padding: 45px 0 50px;
 }
-
-.about__wrapper {
-    display: flex;
-    justify-content: space-between;
-}
-
 .about__info {
     max-width: 646px;
 }
-
 .about__title {
     margin-bottom: 17px;
     text-align: left;
 }
-
 .about__text_margin-bottom {
     margin-bottom: 11px;
+}
+
+.about__video {
+    background-color: #445161;
 }
 
 /******************* ADVANTAGES *******************/
@@ -102,30 +116,263 @@ body {
     background-color: #f5f5f5;
     padding: 25px 0 48px;
 }
-
 .advantages__title {
     margin-bottom: 29px;
     text-align: center;
 }
-
-.advantages__wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
 .advantages__item {
     width: 49%;
     display: flex;
 }
-
 .advantages__item::before {
     content: url(../img/plus-icon.svg);
     display: block;
     padding-top: 7px;
     margin-right: 8px;
 }
-
 .advantages__item:nth-of-type(-n + 4) {
     margin-bottom: 33px;
+}
+/******************* SCREENSHOTS *******************/
+.screenshots {
+    padding: 25px 0 51px;
+}
+.screenshots__title {
+    margin-bottom: 45px;
+}
+.screenshots__item {
+    width: 49%;
+    display: flex;
+}
+.screenshots__item:nth-of-type(-n + 2) {
+    margin-bottom: 27px;
+}
+
+.screenshots__item-title {
+    font-size: 24px;
+    line-height: 1.25;
+    color: #445161;
+    margin-bottom: 19px; /*+6px - компенсация высоты строки*/
+    margin-bottom: 13px;
+}
+
+/* в макете блоки немного поехали (справа 42px), чтобы получить точно такой же вид, надо либо шрифт уменьшать, либо текст менять... */
+.screenshots__item-img {
+    display: block;
+    background-color: #445161;
+    width: 200px;
+    min-height: 150px;
+    height: 100%;
+    object-fit: cover;
+    margin-right: 14px;
+}
+.screenshots__item-text {
+    text-align: justify;
+}
+/******************* REVIEWS *******************/
+.reviews {
+    background-color: #f5f5f5;
+    padding: 25px 0px 42px;
+}
+.reviews__title {
+    margin-bottom: 29px;
+    padding-left: 10px;
+}
+.reviews__item {
+    width: 49%;
+    display: flex;
+}
+.reviews__item:nth-of-type(-n + 2) {
+    margin-bottom: 27px;
+}
+.reviews__item-author-img {
+    width: 64px;
+    height: 64px;
+    border: 1px solid #445161;
+    border-radius: 50%;
+    background-color: #445161;
+    margin-right: 30px;
+    transform: translate(14px, 4px);
+}
+.reviews__item-text {
+    font-family: Roboto;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.3;
+    padding: 16px 10px 5px 15px;
+    background-color: #ebebeb;
+    border-radius: 5px;
+    position: relative;
+}
+.reviews__item-text::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: -24px;
+    border: 12px solid transparent;
+    border-right: 12px solid #ebebeb;
+    transform: scaleY(0.75);
+}
+.reviews__item-message {
+    margin-bottom: 5px;
+}
+.reviews__item-author-name {
+    color: #989898;
+}
+
+/******************* PRODUCTS *******************/
+
+.products {
+    padding: 45px 0 50px;
+}
+
+.products__title {
+    margin-bottom: 26px;
+}
+
+.products__wrapper {
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.products__card {
+    width: 300px;
+    background-color: #445161;
+    border-radius: 5px;
+    padding: 13px 0 19px;
+    text-align: center;
+}
+
+.products__card:not(:last-of-type) {
+    margin-right: 45px;
+}
+
+.products__card-type {
+    font-size: 24px;
+    line-height: 1.25;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.products__card-price {
+    background-color: white;
+    border: 2px solid #445162;
+    padding: 25px 0 16px;
+    font-size: 40px;
+    line-height: 0.75;
+    color: #445162;
+}
+
+.products__card-list {
+    padding: 16px 20px 16px;
+    list-style-type: decimal;
+    list-style-position: inside;
+    font-size: 14px;
+    line-height: 1.7;
+    color: white;
+    text-align: left;
+}
+
+.products__card-list-item:not(:last-of-type) {
+    margin-bottom: 5px;
+}
+
+.products__card-button {
+    padding: 16px 111px 9px;
+}
+
+/******************* FOOTER *******************/
+
+.contacts {
+    background-color: #445162;
+    padding: 25px 0 48px;
+}
+
+.contacts__title {
+    color: white;
+    margin-bottom: 43px;
+}
+
+.contacts__wrapper {
+    justify-content: center;
+}
+
+.submission-form {
+    width: 500px;
+    margin-right: 50px;
+    text-align: center;
+}
+
+.submission-form__item {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 12px 0 7px 12px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #445162;
+}
+
+.submission-form__item::placeholder {
+    font-family: Arial, sans-serif; /*иначе в textarea не тот шрифт...*/
+    color: #445162;
+}
+
+.submission-form__item:focus {
+    outline-color: orange;
+}
+
+.submission-form__item_big {
+    max-width: 500px;
+    min-width: 500px;
+    min-height: 175px;
+}
+
+.submission-form__button {
+    padding: 12px 50px 7px;
+}
+
+.contacts__list {
+    color: white;
+    margin-bottom: 50px;
+    padding-top: 5px;
+}
+
+.contacts__list-item:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+.contacts__icon {
+    fill: white;
+    margin-right: 5px;
+}
+
+.contacts__links {
+    padding-left: 5px;
+}
+
+.contacts__link-img {
+    text-decoration: none;
+    fill: white;
+}
+
+.contacts__link-img:not(:last-of-type) {
+    margin-right: 5px;
+}
+
+.contacts__link-img:hover {
+    fill: orange;
+}
+
+.footer__copyright {
+    display: block;
+    padding: 12px 0;
+    background-color: #f5f5f5;
+    font-size: 12px;
+    line-height: 2;
+    color: #445162;
+    text-align: center;
 }
