@@ -1,4 +1,4 @@
-To store homework for geekbrains course
+To store homework for html5-css3 course
 
 макет 1: https://www.figma.com/file/pERJTWVCQ7ulzE7ZjSnizX/Simple-Template
 
